@@ -1,6 +1,6 @@
 import { toast } from "react-toastify";
 
-export const handleSucess = (msg) => {
+export const handleSuccess = (msg) => {
     toast.success(msg, {
         position: "top-right"
     })

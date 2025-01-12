@@ -2,7 +2,7 @@ import React from "react";
 import { ToastContainer } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { handleError, handleSucess } from "../utils";
+import { handleError, handleSuccess } from "../utils";
 
 function Signup() {
   const [signupInfo, SetSignupInfo] = useState({
@@ -40,7 +40,7 @@ function Signup() {
       const result = await response.json();
       const { success, message, error } = result;
       if (success) {
-        handleSucess(message);
+        handleSuccess(message);
         setTimeout(() => {
           navigate("/login");
         }, 1000);
